@@ -1,7 +1,19 @@
-import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
+import 'package:pix_flutter/pix_flutter.dart';
+import 'package:qr_flutter/qr_flutter.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
-void main() {
+final supabase = Supabase.instance.client;
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Supabase.initialize(
+    url: 'https://cfwyyykjmfwifvmdxhcq.supabase.co',
+    anonKey:
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNmd3l5eWtqbWZ3aWZ2bWR4aGNxIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzAwNjg5MzIsImV4cCI6MTk4NTY0NDkzMn0.ILXJzp7hIN533Z-hB5xSQYX4dAG5nNkhpccsTrs2_nA',
+  );
+
   runApp(const MyApp());
 }
 
@@ -10,52 +22,41 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Startup Name Generator',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Startup Name Generator'),
-        ),
-        body: const Center(
-          child: RandomWords(),
-        ),
-      ),
+    return const MaterialApp(
+      title: 'CACC Shopping App',
+      home: ShoppingCart(),
     );
   }
 }
 
-class RandomWords extends StatefulWidget {
-  const RandomWords({super.key});
+class ShoppingCart extends StatefulWidget {
+  const ShoppingCart({super.key});
 
   @override
-  State<RandomWords> createState() => _RandomWordsState();
+  State<ShoppingCart> createState() => _ShoppingCartState();
 }
 
-class _RandomWordsState extends State<RandomWords> {
-  final _suggestions = <WordPair>[];
-  final _biggerFont = const TextStyle(fontSize: 18);
+class _ShoppingCartState extends State<ShoppingCart> {
+  PixFlutter pixFlutter = PixFlutter(
+      payload: Payload(
+    pixKey: '30c120bb-4c50-420d-b4a5-cc9f5e255e2f',
+    merchantName: 'Eduardo',
+    merchantCity: 'Boa Vista',
+    amount: '0.01',
+    txid: 'c8BT9WQRdG7bYKr36DCS82ZdK',
+    isUniquePayment: true,
+  ));
 
   @override
   Widget build(BuildContext context) {
-    final wordPair = WordPair.random();
-
-    return ListView.builder(
-      padding: const EdgeInsets.all(16.0),
-      itemBuilder: (context, i) {
-        if (i.isOdd) return const Divider();
-
-        final index = i ~/ 2;
-
-        if (index >= _suggestions.length) {
-          _suggestions.addAll(generateWordPairs().take(10));
-        }
-        return ListTile(
-          title: Text(
-            _suggestions[index].asPascalCase,
-            style: _biggerFont,
-          ),
-        );
-      },
-    );
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('CACC Shopping App'),
+        ),
+        body: QrImage(
+          data: pixFlutter.getQRCode(),
+          version: QrVersions.auto,
+          size: 200,
+        ));
   }
 }

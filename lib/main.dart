@@ -50,13 +50,17 @@ class _ShoppingCartState extends State<ShoppingCart> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('CACC Shopping App'),
-        ),
-        body: QrImage(
+      appBar: AppBar(
+        title: const Text('CACC Shopping App'),
+      ),
+      body: Center(
+        heightFactor: 2,
+        child: QrImage(
           data: pixFlutter.getQRCode(),
           version: QrVersions.auto,
           size: 200,
-        ));
+        ),
+      ),
+    );
   }
 }

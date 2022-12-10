@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:pix_flutter/pix_flutter.dart';
 import 'package:qr_flutter/qr_flutter.dart';
+import 'package:shopping_app/constants.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
-final supabase = Supabase.instance.client;
+// PAGES
+
+import 'package:shopping_app/pages/home_page.dart';
+import 'package:shopping_app/pages/products_page.dart';
+import 'package:shopping_app/pages/cart_page.dart';
+import 'package:shopping_app/pages/payment_page.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,6 +24,24 @@ Future<void> main() async {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'CACC Shopping App',
+      theme: ThemeData(fontFamily: 'Poppins'),
+      initialRoute: '/',
+      routes: <String, WidgetBuilder>{
+        '/': (_) => const HomePage(),
+        '/products': (_) => const AccountPage(),
+        '/carr': (_) => const LoginPage(),
+      },
+    );
+  }
+}
+
+/* class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
@@ -63,4 +87,4 @@ class _ShoppingCartState extends State<ShoppingCart> {
       ),
     );
   }
-}
+} */

@@ -10,22 +10,35 @@ class CartProducts extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Obx(
-      () => SizedBox(
-        height: 600,
-        child: ListView.builder(
-          itemCount: controller.products.length,
-          itemBuilder: (BuildContext context, int index) {
-            return CartProductCard(
-              controller: controller,
-              product: controller.products.keys.toList()[index],
-              quantity: controller.products.values.toList()[index],
-              index: index,
-            );
-          },
+    if (controller.products.isEmpty) {
+      return const Center(
+        child: Text(
+          'No Products In Cart :(',
+          style: TextStyle(
+            fontSize: 24,
+            color: Colors.grey,
+            fontWeight: FontWeight.bold,
+          ),
         ),
-      ),
-    );
+      );
+    } else {
+      return Obx(
+        () => SizedBox(
+          height: 600,
+          child: ListView.builder(
+            itemCount: controller.products.length,
+            itemBuilder: (BuildContext context, int index) {
+              return CartProductCard(
+                controller: controller,
+                product: controller.products.keys.toList()[index],
+                quantity: controller.products.values.toList()[index],
+                index: index,
+              );
+            },
+          ),
+        ),
+      );
+    }
   }
 }
 

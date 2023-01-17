@@ -56,6 +56,17 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  fonts:
+    - family: SofiaSansSemiCondensed
+      fonts:
+        - asset: fonts/SofiaSansSemiCondensed-Regular.ttf
+        - asset: fonts/SofiaSansSemiCondensed-Bold.ttf
+          weight: 700
+          
+    - family: SweetMilk
+      fonts:
+        - asset: fonts/Sweetmilk.ttf
+
   assets:
     - assets/
   # The following line ensures that the Material Icons font is

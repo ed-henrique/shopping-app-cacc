@@ -1,16 +1,31 @@
-# shopping_app_cacc
+# CACC Shopping App
 
-A new Flutter project.
+URGENT:
 
-## Getting Started
+- [ ] Add PIX payment support
+- [ ] Error when removing all items from cart
+- [ ] Add log to cloud database when order is made
+  - Either supabase, firebase, mongodb or s3 aws
+- [ ] Get material for physical terminal
+  - Monitor
+  - Smartphone or notebook
+  - Structure ([SketchUp](https://app.sketchup.com/share/tc/northAmerica/CbucwfJC8S0?stoken=8EGcj5B40aUOFxPfpuOpi3Bq1AGeuxHRkx12XKqvxFB0CrL8_NB3ugM8o-ShlgAT&source=web))
 
-This project is a starting point for a Flutter application.
+GOOD TO HAVE:
 
-A few resources to get you started if this is your first Flutter project:
+- [ ] Change font
+  - Find pretty font first
+- [ ] List by categories
+- [ ] Make images appear
+- [ ] Add user feedback when the user adds items to cart
+- [ ] Create Figma design for reference to the app's design
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+FUTURE, MAYBE NEVER:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [ ] Refactor
+
+## How to Run
+
+```bash
+flutter run -d web-server --web-hostname localhost --web-port 3000
+```

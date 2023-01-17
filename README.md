@@ -1,4 +1,4 @@
-# CACC Shopping App
+# shopping_app_cacc
 
 A new Flutter project.
 

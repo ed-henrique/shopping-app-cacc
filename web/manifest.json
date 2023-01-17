@@ -1,6 +1,6 @@
 {
-    "name": "shopping_app",
-    "short_name": "shopping_app",
+    "name": "shopping_app_cacc",
+    "short_name": "shopping_app_cacc",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

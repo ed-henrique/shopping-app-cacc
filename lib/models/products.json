@@ -3,77 +3,77 @@
         {
             "name": "Amendoim",
             "price": 1.0,
-            "imageUrl": "../assets/amendoim.jpg"
+            "imageUrl": "../../assets/images/amendoim.jpg"
         },
         {
             "name": "Baré",
             "price": 3.5,
-            "imageUrl": "../assets/bare.jpg"
+            "imageUrl": "../../assets/images/bare.jpg"
         },
         {
             "name": "Bis",
             "price": 0.5,
-            "imageUrl": "../assets/bis.jfif"
+            "imageUrl": "../../assets/images/bis.jfif"
         },
         {
             "name": "Biscoito Mabel",
             "price": 3.0,
-            "imageUrl": "../assets/mabel.webp"
+            "imageUrl": "../../assets/images/mabel.webp"
         },
         {
             "name": "Biscoito Spantoo",
             "price": 3.0,
-            "imageUrl": "../assets/spantoo.jfif"
+            "imageUrl": "../../assets/images/spantoo.jfif"
         },
         {
             "name": "Chocolate Baton",
             "price": 1.5,
-            "imageUrl": "../assets/baton.webp"
+            "imageUrl": "../../assets/images/baton.webp"
         },
         {
             "name": "Chocolate Kitkat",
             "price": 4.0,
-            "imageUrl": "../assets/kitkat.jfif"
+            "imageUrl": "../../assets/images/kitkat.jfif"
         },
         {
             "name": "Coca Cola",
             "price": 3.5,
-            "imageUrl": "../assets/coca.jfif"
+            "imageUrl": "../../assets/images/coca.jfif"
         },
         {
             "name": "Cup Noodles",
             "price": 6.5,
-            "imageUrl": "../assets/cupnoodles.jpeg"
+            "imageUrl": "../../assets/images/cupnoodles.jpeg"
         },
         {
             "name": "Energético Monster",
             "price": 8.5,
-            "imageUrl": "../assets/monster.jpg"
+            "imageUrl": "../../assets/images/monster.jpg"
         },
         {
             "name": "Fanta",
             "price": 3.5,
-            "imageUrl": "../assets/fanta.jfif"
+            "imageUrl": "../../assets/images/fanta.jfif"
         },
         {
             "name": "Fregells",
             "price": 1.5,
-            "imageUrl": "../assets/freegells.jfif"
+            "imageUrl": "../../assets/images/freegells.jfif"
         },
         {
             "name": "Hersheys",
             "price": 0.4,
-            "imageUrl": "../assets/hersheys.jfif"
+            "imageUrl": "../../assets/images/hersheys.jfif"
         },
         {
             "name": "Paçoquinha",
             "price": 0.75,
-            "imageUrl": "../assets/paçoquinha.jfif"
+            "imageUrl": "../../assets/images/paçoquinha.jfif"
         },
         {
             "name": "Schweppes Citrus",
             "price": 4.0,
-            "imageUrl": "../assets/schweppes.jpg"
+            "imageUrl": "../../assets/images/schweppes.jpg"
         },
         {
             "name": "Snacks Yes",
@@ -83,12 +83,12 @@
         {
             "name": "Toddynho",
             "price": 2.5,
-            "imageUrl": "../assets/toddynho.jpg"
+            "imageUrl": "../../assets/images/toddynho.jpg"
         },
         {
             "name": "Tuffit",
             "price": 2.0,
-            "imageUrl": "../assets/tuffit.png"
+            "imageUrl": "../../assets/images/tuffit.png"
         }
     ]
 }

@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'CACC Shopping App',
       theme: ThemeData(
         primarySwatch: Colors.orange,
+        fontFamily: 'SofiaSansSemiCondensed',
       ),
       home: const CatalogScreen(),
     );

@@ -13,7 +13,7 @@ class Product {
     Product(
       name: "amendoim",
       price: 1.0,
-      imageUrl: "assets/amendoim.jpg",
+      imageUrl: "assets/images/amendoim.png",
     ),
     Product(
       name: "baré",

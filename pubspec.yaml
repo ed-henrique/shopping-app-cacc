@@ -59,16 +59,12 @@ flutter:
   fonts:
     - family: SofiaSansSemiCondensed
       fonts:
-        - asset: fonts/SofiaSansSemiCondensed-Regular.ttf
-        - asset: fonts/SofiaSansSemiCondensed-Bold.ttf
+        - asset: assets/fonts/SofiaSansSemiCondensed-Regular.ttf
+        - asset: assets/fonts/SofiaSansSemiCondensed-Bold.ttf
           weight: 700
-          
-    - family: SweetMilk
-      fonts:
-        - asset: fonts/Sweetmilk.ttf
 
   assets:
-    - assets/
+    - assets/images/
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

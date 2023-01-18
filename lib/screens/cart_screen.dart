@@ -9,7 +9,7 @@ class CartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("You Cart"),
+        title: const Text("Your Cart"),
       ),
       body: Column(
         children: [

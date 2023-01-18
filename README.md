@@ -3,13 +3,13 @@
 URGENT:
 
 - [ ] Add PIX payment support
-- [ ] Error when removing all items from cart
 - [ ] Add log to cloud database when order is made
   - Either supabase, firebase, mongodb or s3 aws
 - [ ] Get material for physical terminal
   - Monitor
   - Smartphone or notebook
   - Structure ([SketchUp](https://app.sketchup.com/share/tc/northAmerica/CbucwfJC8S0?stoken=8EGcj5B40aUOFxPfpuOpi3Bq1AGeuxHRkx12XKqvxFB0CrL8_NB3ugM8o-ShlgAT&source=web))
+- [x] Error when removing all items from cart
 
 GOOD TO HAVE:
 

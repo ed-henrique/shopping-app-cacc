@@ -10,7 +10,14 @@ class CatalogScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Catalog")),
+      appBar: AppBar(
+        title: const Center(
+          child: Text(
+            "Products",
+            textAlign: TextAlign.center,
+          ),
+        ),
+      ),
       body: SafeArea(
         child: Column(
           children: [

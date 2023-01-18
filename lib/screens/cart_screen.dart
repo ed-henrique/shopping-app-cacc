@@ -9,7 +9,16 @@ class CartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Your Cart"),
+        title: const Center(
+          child: Text(
+            "Your Cart",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 24,
+            ),
+          ),
+        ),
       ),
       body: Column(
         children: [
@@ -42,6 +51,19 @@ class CartScreen extends StatelessWidget {
           ),
           CartProducts(),
           CartTotal(),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 20),
+            child: ElevatedButton(
+              onPressed: () {},
+              child: const Text(
+                "Finish Order",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );

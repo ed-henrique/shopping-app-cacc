@@ -11,7 +11,9 @@ class CartTotal extends StatelessWidget {
   Widget build(BuildContext context) {
     return Obx(
       () => (controller.products.isEmpty)
-          ? Container()
+          ? const SizedBox(
+              height: 49,
+            )
           : Container(
               decoration: const BoxDecoration(
                 border: Border(

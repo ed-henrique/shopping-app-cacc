@@ -15,6 +15,10 @@ class CatalogScreen extends StatelessWidget {
           child: Text(
             "Products",
             textAlign: TextAlign.center,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 24,
+            ),
           ),
         ),
       ),
@@ -22,9 +26,18 @@ class CatalogScreen extends StatelessWidget {
         child: Column(
           children: [
             const CatalogProducts(),
-            ElevatedButton(
-              onPressed: () => Get.to(() => const CartScreen()),
-              child: const Text("Go to Cart"),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 20),
+              child: ElevatedButton(
+                onPressed: () => Get.to(() => const CartScreen()),
+                child: const Text(
+                  "Go to Cart",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
             ),
           ],
         ),

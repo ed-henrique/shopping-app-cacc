@@ -14,37 +14,13 @@ class CartTotal extends StatelessWidget {
           ? const SizedBox(
               height: 49,
             )
-          : Container(
-              decoration: const BoxDecoration(
-                border: Border(
-                  top: BorderSide(
-                    color: Colors.grey,
-                    width: 1,
-                  ),
+          : Center(
+              child: Text(
+                'TOTAL: R\$ ${controller.total}',
+                style: const TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
                 ),
-              ),
-              padding: const EdgeInsets.symmetric(
-                horizontal: 75,
-                vertical: 10,
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Text(
-                    'TOTAL',
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Text(
-                    "R\$ ${controller.total}",
-                    style: const TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
               ),
             ),
     );

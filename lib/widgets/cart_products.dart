@@ -24,7 +24,7 @@ class CartProducts extends StatelessWidget {
                   ),
                 ),
               )
-            : ListView.builder(
+            : ListView.separated(
                 itemCount: controller.products.length,
                 shrinkWrap: true,
                 itemBuilder: (BuildContext context, int index) {
@@ -33,6 +33,14 @@ class CartProducts extends StatelessWidget {
                     product: controller.products.keys.toList()[index],
                     quantity: controller.products.values.toList()[index],
                     index: index,
+                  );
+                },
+                separatorBuilder: (BuildContext context, int index) {
+                  return const Divider(
+                    height: 1,
+                    indent: 20,
+                    endIndent: 20,
+                    color: Colors.amberAccent,
                   );
                 },
               ),
@@ -59,8 +67,8 @@ class CartProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(
-        horizontal: 20.0,
-        vertical: 10,
+        horizontal: 20,
+        vertical: 20,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -76,27 +84,42 @@ class CartProductCard extends StatelessWidget {
           ),
           Expanded(
             child: Text(
-              product.name,
+              product.name.toUpperCase(),
+              style: const TextStyle(
+                fontSize: 24,
+              ),
             ),
           ),
           IconButton(
             onPressed: () {
               controller.removeProduct(product);
             },
+            iconSize: 40,
+            highlightColor: Colors.red,
             icon: const Icon(
-              Icons.remove_circle,
+              Icons.remove,
               color: Colors.white,
             ),
           ),
-          Text(
-            quantity.toString(),
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 20,
+            ),
+            child: Text(
+              quantity.toString(),
+              style: const TextStyle(
+                fontSize: 24,
+              ),
+            ),
           ),
           IconButton(
             onPressed: () {
               controller.addProduct(product);
             },
+            iconSize: 40,
+            highlightColor: Colors.green,
             icon: const Icon(
-              Icons.add_circle,
+              Icons.add,
               color: Colors.white,
             ),
           ),

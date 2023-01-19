@@ -9,11 +9,21 @@ class CatalogProducts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Flexible(
-        child: ListView.builder(
-            itemCount: Product.products.length,
-            itemBuilder: (BuildContext context, int index) {
-              return CatalogProductCard(index: index);
-            }));
+      child: ListView.separated(
+        itemCount: Product.products.length,
+        itemBuilder: (BuildContext context, int index) {
+          return CatalogProductCard(index: index);
+        },
+        separatorBuilder: (BuildContext context, int index) {
+          return const Divider(
+            height: 1,
+            indent: 20,
+            endIndent: 20,
+            color: Colors.white,
+          );
+        },
+      ),
+    );
   }
 }
 
@@ -28,7 +38,7 @@ class CatalogProductCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(
         horizontal: 20,
-        vertical: 10,
+        vertical: 20,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -69,22 +79,16 @@ class CatalogProductCard extends StatelessWidget {
             ],
           ),
           IconButton(
-              onPressed: () {
-                const snackBar = SnackBar(
-                  content: Text(
-                    'Added to Cart!',
-                    textAlign: TextAlign.center,
-                  ),
-                  duration: Duration(milliseconds: 500),
-                );
-
-                cartController.addProduct(Product.products[index]);
-                ScaffoldMessenger.of(context).showSnackBar(snackBar);
-              },
-              icon: const Icon(
-                Icons.add_circle,
-                color: Colors.white,
-              ))
+            onPressed: () {
+              cartController.addProduct(Product.products[index]);
+            },
+            highlightColor: Colors.green,
+            iconSize: 50,
+            icon: const Icon(
+              Icons.add,
+              color: Colors.white,
+            ),
+          ),
         ],
       ),
     );

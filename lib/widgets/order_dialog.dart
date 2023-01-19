@@ -47,7 +47,7 @@ class OrderDialog extends StatelessWidget {
                         const Text(
                           'Read the following QR Code',
                           style: TextStyle(
-                            fontSize: 32,
+                            fontSize: 20,
                             fontWeight: FontWeight.bold,
                             color: Colors.black,
                           ),

@@ -47,23 +47,31 @@ class OrderDialog extends StatelessWidget {
                         const Text(
                           'Read the following QR Code',
                           style: TextStyle(
-                            fontSize: 24,
+                            fontSize: 32,
                             fontWeight: FontWeight.bold,
+                            color: Colors.black,
                           ),
+                          textAlign: TextAlign.center,
                         ),
                         (controller.products.isEmpty)
                             ? Container()
                             : QrImage(
                                 data: getQRCode(controller.total),
                                 version: QrVersions.auto,
-                                size: 250,
+                                size: 350,
                               ),
-                        TextButton(
+                        ElevatedButton(
                           onPressed: () {
                             Navigator.pop(context);
                             controller.removeAllProducts();
                           },
-                          child: const Text('Close'),
+                          child: const Text(
+                            'Done',
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                         )
                       ],
                     ),

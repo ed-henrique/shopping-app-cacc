@@ -4,20 +4,23 @@ import 'package:get/get.dart';
 import 'screens/catalog_screen.dart';
 
 void main() {
-  runApp(const GetMaterialApp(home: MyApp()));
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
+  runApp(
+    GetMaterialApp(
       title: 'CACC Shopping App',
       theme: ThemeData(
-          //fontFamily: 'SofiaSansSemiCondensed',
+        fontFamily: 'SofiaSansSemiCondensed',
+        primarySwatch: Colors.orange,
+        scaffoldBackgroundColor: Colors.black,
+        textTheme: const TextTheme(
+          bodyText2: TextStyle(
+            color: Colors.white,
           ),
+        ).apply(
+          bodyColor: Colors.white,
+          displayColor: Colors.white,
+        ),
+      ),
       home: const CatalogScreen(),
-    );
-  }
+    ),
+  );
 }

@@ -12,7 +12,7 @@ class CartProducts extends StatelessWidget {
   Widget build(BuildContext context) {
     return Obx(
       () => SizedBox(
-        height: 600,
+        height: MediaQuery.of(context).size.height * 0.75,
         child: (controller.products.isEmpty)
             ? const Center(
                 child: Text(
@@ -26,6 +26,7 @@ class CartProducts extends StatelessWidget {
               )
             : ListView.builder(
                 itemCount: controller.products.length,
+                shrinkWrap: true,
                 itemBuilder: (BuildContext context, int index) {
                   return CartProductCard(
                     controller: controller,
@@ -82,7 +83,10 @@ class CartProductCard extends StatelessWidget {
             onPressed: () {
               controller.removeProduct(product);
             },
-            icon: const Icon(Icons.remove_circle),
+            icon: const Icon(
+              Icons.remove_circle,
+              color: Colors.white,
+            ),
           ),
           Text(
             quantity.toString(),
@@ -91,7 +95,10 @@ class CartProductCard extends StatelessWidget {
             onPressed: () {
               controller.addProduct(product);
             },
-            icon: const Icon(Icons.add_circle),
+            icon: const Icon(
+              Icons.add_circle,
+              color: Colors.white,
+            ),
           ),
         ],
       ),

@@ -37,7 +37,7 @@ class CatalogProductCard extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: 60,
-                backgroundColor: Colors.blue,
+                backgroundColor: Colors.white,
                 child: CircleAvatar(
                   radius: 55,
                   backgroundImage: AssetImage(
@@ -83,6 +83,7 @@ class CatalogProductCard extends StatelessWidget {
               },
               icon: const Icon(
                 Icons.add_circle,
+                color: Colors.white,
               ))
         ],
       ),

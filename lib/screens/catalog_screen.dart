@@ -29,7 +29,7 @@ class CatalogScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 20),
               child: ElevatedButton(
-                onPressed: () => Get.to(() => const CartScreen()),
+                onPressed: () => Get.to(() => CartScreen()),
                 child: const Text(
                   "Go to Cart",
                   style: TextStyle(

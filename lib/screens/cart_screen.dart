@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopping_app_cacc/widgets/order_dialog.dart';
 import '../widgets/cart_products.dart';
 import '../widgets/cart_total.dart';
 
@@ -51,19 +52,7 @@ class CartScreen extends StatelessWidget {
           ),
           CartProducts(),
           CartTotal(),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 20),
-            child: ElevatedButton(
-              onPressed: () {},
-              child: const Text(
-                "Finish Order",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-          ),
+          OrderDialog(),
         ],
       ),
     );

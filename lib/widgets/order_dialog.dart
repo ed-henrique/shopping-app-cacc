@@ -51,14 +51,17 @@ class OrderDialog extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        QrImage(
-                          data: getQRCode(controller.total),
-                          version: QrVersions.auto,
-                          size: 250,
-                        ),
+                        (controller.products.isEmpty)
+                            ? Container()
+                            : QrImage(
+                                data: getQRCode(controller.total),
+                                version: QrVersions.auto,
+                                size: 250,
+                              ),
                         TextButton(
                           onPressed: () {
                             Navigator.pop(context);
+                            controller.removeAllProducts();
                           },
                           child: const Text('Close'),
                         )

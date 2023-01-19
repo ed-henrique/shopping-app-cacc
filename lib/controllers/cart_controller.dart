@@ -16,6 +16,10 @@ class CartController extends GetxController {
         : _products[product]--;
   }
 
+  void removeAllProducts() {
+    _products.clear();
+  }
+
   get products => _products;
   get productSubTotal => _products.entries
       .map((product) => product.key.price * product.value)

@@ -12,7 +12,7 @@ class CartProducts extends StatelessWidget {
   Widget build(BuildContext context) {
     return Obx(
       () => SizedBox(
-        height: 834,
+        height: 600,
         child: (controller.products.isEmpty)
             ? const Center(
                 child: Text(

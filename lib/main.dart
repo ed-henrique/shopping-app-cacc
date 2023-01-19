@@ -15,8 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'CACC Shopping App',
       theme: ThemeData(
-        fontFamily: 'SofiaSansSemiCondensed',
-      ),
+          //fontFamily: 'SofiaSansSemiCondensed',
+          ),
       home: const CatalogScreen(),
     );
   }

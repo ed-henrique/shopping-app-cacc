@@ -33,31 +33,53 @@ class CatalogProductCard extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          CircleAvatar(
-            radius: 40,
-            backgroundImage: AssetImage(
-              Product.products[index].imageUrl,
-            ),
-          ),
-          const SizedBox(
-            width: 20,
-          ),
-          Expanded(
-            child: Text(
-              Product.products[index].name,
-              style: const TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 18,
+          Row(
+            children: [
+              CircleAvatar(
+                radius: 60,
+                backgroundColor: Colors.blue,
+                child: CircleAvatar(
+                  radius: 55,
+                  backgroundImage: AssetImage(
+                    Product.products[index].imageUrl,
+                  ),
+                ),
               ),
-            ),
-          ),
-          Expanded(
-            child:
-                Text("R\$ ${Product.products[index].price.toStringAsFixed(2)}"),
+              const SizedBox(
+                width: 20,
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    Product.products[index].name.toUpperCase(),
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24,
+                    ),
+                  ),
+                  Text(
+                    "R\$ ${Product.products[index].price.toStringAsFixed(2)}",
+                    style: const TextStyle(
+                      fontSize: 18,
+                    ),
+                  ),
+                ],
+              ),
+            ],
           ),
           IconButton(
               onPressed: () {
+                const snackBar = SnackBar(
+                  content: Text(
+                    'Added to Cart!',
+                    textAlign: TextAlign.center,
+                  ),
+                  duration: Duration(milliseconds: 500),
+                );
+
                 cartController.addProduct(Product.products[index]);
+                ScaffoldMessenger.of(context).showSnackBar(snackBar);
               },
               icon: const Icon(
                 Icons.add_circle,

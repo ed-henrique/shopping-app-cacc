@@ -13,12 +13,11 @@ URGENT:
 
 GOOD TO HAVE:
 
-- [ ] Change font
-  - Find pretty font first
-- [ ] List by categories
-- [ ] Make images appear
 - [ ] Add user feedback when the user adds items to cart
 - [ ] Create Figma design for reference to the app's design
+- [x] Make images appear
+- [x] Change font
+  - Find pretty font first
 
 FUTURE, MAYBE NEVER:
 

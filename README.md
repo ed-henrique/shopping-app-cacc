@@ -2,8 +2,6 @@
 
 URGENT:
 
-- [ ] Add log to cloud database when order is made
-  - Either supabase, firebase, mongodb or s3 aws
 - [ ] Get material for physical terminal
   - Monitor
   - Smartphone or notebook
@@ -13,15 +11,10 @@ URGENT:
 
 GOOD TO HAVE:
 
-- [ ] Add user feedback when the user adds items to cart
-- [ ] Create Figma design for reference to the app's design
+- [x] Add user feedback when the user adds items to cart
 - [x] Make images appear
 - [x] Change font
   - Find pretty font first
-
-FUTURE, MAYBE NEVER:
-
-- [ ] Refactor
 
 ## How to Run
 
